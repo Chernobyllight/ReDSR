@@ -2,7 +2,7 @@
 
 Pytorch implementation of paper *Preserving Full Degradation Details for Blind Image Super-Resolution*.
 
-![image-20240702164610294](C:\Users\KevinLin\AppData\Roaming\Typora\typora-user-images\image-20240702164610294.png)
+
 
 
 
