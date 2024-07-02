@@ -69,4 +69,3 @@ noise: 0.0
 use_focal_weight: False
 
 
-DANET_CHECKPOINT: ~

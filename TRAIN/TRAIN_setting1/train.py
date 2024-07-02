@@ -45,15 +45,6 @@ if __name__ == '__main__':
     iteration = 1
 
 
-    if opt['DANET_CHECKPOINT'] is not None:
-        checkpoint = torch.load(opt['DANET_CHECKPOINT'])
-        DA_MODEL.DP_MODEL.load_state_dict(checkpoint['model_DP_state_dict'])
-        DA_MODEL.SRN_MODEL.load_state_dict(checkpoint['model_SRN_state_dict'])
-        DA_MODEL.RB_MODEL.load_state_dict(checkpoint['model_RB_state_dict'])
-
-        epoch = checkpoint['epoch']
-
-        print('use SRN of epoch:', epoch)
 
 
 
