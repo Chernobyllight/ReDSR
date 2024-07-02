@@ -2,7 +2,7 @@
 
 Pytorch implementation of paper *Preserving Full Degradation Details for Blind Image Super-Resolution*.
 
-
+![image](framework/framework.png)
 
 
 
