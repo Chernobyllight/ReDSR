@@ -1,0 +1,64 @@
+
+dataset:
+  clean_dir: '/data/lhd/LHD_DATASET/bachelor_degree/DIV2K_dataset/DIV2K_train_HR/'
+#  val_clean_dir: '/data/lhd/LHD_DATASET/bachelor_degree/DIV2K_dataset/DIV2K_valid_HR/'
+  val_clean_dir: 'F:/datasets/Benchmark/Urban100/HR'
+
+#test
+num_workers: 1
+batch_size: 5
+
+saving_results: True
+
+
+num_epochs: 600
+
+learning_rate_SRN: 0.0001
+step_size: 150
+gamma_SRN: 0.5
+
+learning_rate: 0.001
+DA_TRAIN_epoch: 100
+DA_step_size: 60
+gamma_DA: 0.1
+
+val_interval: 1
+
+saving: True
+save_path: da_model
+save_model_interval: 5
+
+
+patch_size: 48
+scale: 4
+
+
+Degradation_Predictor:
+  in_nc: 3
+  nf: 64
+  num_params: 64
+  use_bias: True
+
+Reblur_Branch:
+  img_channel: 3
+  output_img_channel: 3
+  nc: 64
+  nz: 64
+  scale: 4
+
+
+DASR:
+  scale: 4
+  rgb_range: 1.0
+
+
+# degradation
+blur_kernel: 21
+blur_type: aniso_gaussian #(iso_gaussian | aniso_gaussian)
+lambda_1: 1.2
+lambda_2: 2.4
+noise: 10
+theta: 45
+
+
+DANET_CHECKPOINT: 'G:/ReDSR_official/checkpoints/setting2/setting2_ckp.tar'

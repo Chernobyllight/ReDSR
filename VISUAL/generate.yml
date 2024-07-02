@@ -1,0 +1,44 @@
+
+
+DANET_CHECKPOINT: 'G:/ReDSR_official/checkpoints/setting1/setting1_ckp.tar'
+
+B100_DATA: 'F:/datasets/Benchmark/B100/HR/'
+U100_DATA: 'F:/datasets/Benchmark/Urban100/HR/'
+
+
+patch_size: 64
+scale: 4
+batch_size: 16
+
+Degradation_Predictor:
+  in_nc: 3
+  nf: 64
+  num_params: 64
+  use_bias: True
+
+Reblur_Branch:
+  img_channel: 3
+  output_img_channel: 3
+  nc: 64
+  nz: 64
+  scale: 4
+
+
+
+DASR:
+  scale: 4
+  rgb_range: 1.0
+
+
+
+
+# degradation
+blur_kernel: 21
+blur_type: iso_gaussian #(iso_gaussian | aniso_gaussian)
+sig: 0.2
+sig_min: 0.2
+sig_max: 4.0
+lambda_min: 0.2
+lambda_max: 4.0
+noise: 0.0
+
